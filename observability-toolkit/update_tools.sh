@@ -1,8 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 
 echo ">> Preparing the environment"
 echo ">> Install docker-compose and k6"
-
 
 # Prepare docker compose
 sudo install -m 0755 -d /etc/apt/keyrings
@@ -22,11 +21,11 @@ echo "deb [signed-by=/usr/share/keyrings/k6-archive-keyring.gpg] https://dl.k6.i
 
 # Update packages and install them
 sudo apt-get update
-sudo apt-get install -y docker-compose-plugin k6
+sudo apt-get install -y docker-compose-plugin k6 && echo "apt-get install done"
 
 echo ">> Install just"
 
-JUST_VERSION="1.37.0"
+export JUST_VERSION="1.37.0"
 curl -sLo just.tar.gz https://github.com/casey/just/releases/download/1.37.0/just-$JUST_VERSION-x86_64-unknown-linux-musl.tar.gz
 sudo tar xf just.tar.gz -C /usr/local/bin just
 
