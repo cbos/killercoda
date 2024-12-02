@@ -1,0 +1,21 @@
+{
+  "title": "Observability toolkit",
+  "description": "Play around with the Observability toolkit",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "foreground": "update_tools.sh"
+    },
+    "steps": [
+      {
+        "text": "step1.md"
+      }
+    ]
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  },
+  "interface": {
+    "layout": "ide"
+  }
+}
