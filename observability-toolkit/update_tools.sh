@@ -1,9 +1,5 @@
 #!/bin/sh
 
-set -euf
-# shellcheck disable=SC3040
-(set -o pipefail 2> /dev/null) && set -o pipefail
-
 echo ">> Preparing the environment"
 echo ">> Install docker-compose and k6"
 
